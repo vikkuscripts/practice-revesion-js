@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>papa</title>
+</head>
+<style>
+ .bag-button{
+  border:none;
+    padding: 5px 15px;
+    border-radius: 20px; 
+    background-color:lightgreen;
+
+  }
+  .wish-button{
+    border:2px solidblack;
+    padding: 5px 35px;
+    border-radius: 10px; 
+    background-color:gray;
+text-transform: uppercase;
+  }
+</style>
+
+<body>
+  <button class="bag-button" onclick="cartQuantity = cartQuantity + 1;document.querySelector('#cart-summary').innerText = `Your Bag has ${cartQuantity}    items`;">Move to bag</button>
+
+  <button class="wish-button"onclick=
+  "cartQuantity = cartQuantity - 1;
+  document.querySelector('#cart-summary').innerText = `Your Bag has ${cartQuantity}    items`;">Move to wishlist</button>
+
+  <button class="bag-button"onclick="cartQuantity = cartQuantity + 2;document.querySelector('#cart-summary').innerText = `Your Bag has ${cartQuantity}    items`;">Add 1+1 sale item</button>
+
+ <h1 id="cart-summary"></h1>
+  
+  <script>
+    let cartQuantity = 0;
+document.querySelector('#cart-summary').innerText = `Your Bag has ${cartQuantity}    items`;
+  </script>
+</body>
+</html>
